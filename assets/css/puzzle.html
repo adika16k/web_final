@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avengers Puzzle</title>
+  <link rel="stylesheet" href="puzzle.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="puzzle.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #222222" >
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="../../index.html">Домашняя Кухня</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Рецепты
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Zavtrak.html">Завтраки</a></li>
+            <li><a class="dropdown-item" href="Second_food.html">Вторые блюда</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="Dessert.html">Десерты</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lifehacks.html">Лайфхаки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Author.html">Повара</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Развлечения
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="quiz.html">Memory Card game</a></li>
+            <li><a class="dropdown-item" href="puzzle.html">Puzzle</a></li>
+            <li><a class="dropdown-item" href="quizlet.html">Quiz</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" style="margin-right: 60px;">
+        <li class="nav-item">
+          <a class="nav-link" href="account.html">Login</a>
+        </li>
+      </ul>
+      <section>
+        <form action="" id="searchBar">
+          <input type="text" name="" placeholder="Search..." />
+          <button type="button" onclick="toggleBar()">
+            <svg class="search" version="1.1" viewBox="0 0 32 32"><circle cx="14" cy="14" fill="none" id="XMLID_42_" r="9" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><line fill="none" id="XMLID_44_" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="27" x2="20.366" y1="27" y2="20.366"/></svg>
+            <svg class="close" viewBox="0 0 32 32"><g data-name="Layer 2" id="Layer_2"><path fill="#fff" d="M4,29a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42l24-24a1,1,0,1,1,1.42,1.42l-24,24A1,1,0,0,1,4,29Z"/><path fill="#fff" d="M28,29a1,1,0,0,1-.71-.29l-24-24A1,1,0,0,1,4.71,3.29l24,24a1,1,0,0,1,0,1.42A1,1,0,0,1,28,29Z"/></g><g id="frame"><rect fill="none" height="32" width="32"/></g></svg>
+          </button>
+        </form>
+      </section>
+      <script src="search.js"></script>
+    </div>
+  </div>
+</nav>
+<br><br><br><br><br>
+<div id="board"></div>
+<h2>Turns: <span id="turns">0</span></h2>
+<div id="pieces"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Memory Card Game in JavaScript | CodingNepal</title>
+  <link rel="stylesheet" href="quiz.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #222222" >
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="../../index.html">Домашняя Кухня</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Рецепты
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Zavtrak.html">Завтраки</a></li>
+            <li><a class="dropdown-item" href="Second_food.html">Вторые блюда</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="Dessert.html">Десерты</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lifehacks.html">Лайфхаки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Author.html">Повара</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Развлечения
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="quiz.html">Memory Card game</a></li>
+            <li><a class="dropdown-item" href="puzzle.html">Puzzle</a></li>
+            <li><a class="dropdown-item" href="quizlet.html">Quiz</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<audio id="myAudio">
+  <source src="game-start-6104.mp3" type="audio/mp3">
+</audio>
+<audio id="gameCompleteSound">
+  <source src="success-1-6297.mp3" type="audio/mp3">
+</audio>
+<div class="start" id="nig">
+  <button type="button" class="btn btn-primary z-10000 btn-rounded waves-effect waves-light" id="startBtn" onclick="START()">START</button>
+</div>
+
+<div class="wrapper">
+  <ul class="cards">
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-1.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-6.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-3.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-2.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-1.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-5.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-2.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-6.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-3.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-4.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-5.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-4.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-4.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-4.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-4.png" alt="card-img">
+      </div>
+    </li>
+    <li class="card">
+      <div class="view front-view">
+        <img src="./images/que_icon.svg" alt="icon">
+      </div>
+      <div class="view back-view">
+        <img src="./images/img-4.png" alt="card-img">
+      </div>
+    </li>
+  </ul>
+</div>
+<script src="quiz.js"></script>
+<div class="timer"></div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="timer.js"></script>
+
+</body>
+</html>

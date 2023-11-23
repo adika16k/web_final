@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="account.css">
+  <title>Registration Form</title>
+</head>
+<body>
+
+<div class="form-container">
+  <form id="registrationForm">
+    <div class="form-step" data-step="1">
+      <h2>Step 1</h2>
+      <label for="name">What is your name? </label>
+      <input type="text" id="name" name="name" required>
+      <button type="button" class="next-btn" onclick="nextStep(1)">Next</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="form-step" data-step="2">
+      <h2>Step 2</h2>
+      <label for="email">Your email? </label>
+      <input type="email" id="email" name="email" required>
+      <button type="button" class="prev-btn" onclick="prevStep(2)">Previous</button>
+      <button type="button" class="next-btn" onclick="nextStep(2)">Next</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="form-step" data-step="3">
+      <h2>Last Step</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+      <button type="button" class="prev-btn" onclick="prevStep(3)">Previous</button>
+      <button type="button" onclick="register()">Register</button>
+    </div>
+  </form>
+</div>
+<div id="registrationUnSuccessModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal1()">&times;</span>
+    <p>Your password doesn't match!</p>
+    <button class="buts" onclick="closeModal1()">OK!</button>
+  </div>
+</div>
+<!-- Registration Success Modal -->
+<div id="registrationSuccessModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>Your registration was successful. Thank you for being with us!</p>
+    <button class="buts" onclick="redirectToMain()">Close</button>
+  </div>
+</div>
+
+<script src="account.js"></script>
+</body>
+</html>

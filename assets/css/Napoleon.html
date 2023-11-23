@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Домашняя Кухня</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="https://lfb.su/assets/images/image11.jpeg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<main>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #222222" >
+    <div class="container-fluid" >
+      <a class="navbar-brand" href="../../index.html">Домашняя Кухня</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Рецепты
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Zavtrak.html">Завтраки</a></li>
+              <li><a class="dropdown-item" href="Second_food.html">Вторые блюда</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="Dessert.html">Десерты</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lifehacks.html">Лайфхаки</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Author.html">Повара</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Развлечения
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="quiz.html">Memory Card game</a></li>
+              <li><a class="dropdown-item" href="puzzle.html">Puzzle</a></li>
+              <li><a class="dropdown-item" href="quizlet.html">Quiz</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto" style="margin-right: 60px;">
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">Login</a>
+          </li>
+        </ul>
+        <section>
+          <form action="" id="searchBar">
+            <input type="text" name="" placeholder="Search..." />
+            <button type="button" onclick="toggleBar()">
+              <svg class="search" version="1.1" viewBox="0 0 32 32"><circle cx="14" cy="14" fill="none" id="XMLID_42_" r="9" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><line fill="none" id="XMLID_44_" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="27" x2="20.366" y1="27" y2="20.366"/></svg>
+              <svg class="close" viewBox="0 0 32 32"><g data-name="Layer 2" id="Layer_2"><path fill="#fff" d="M4,29a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42l24-24a1,1,0,1,1,1.42,1.42l-24,24A1,1,0,0,1,4,29Z"/><path fill="#fff" d="M28,29a1,1,0,0,1-.71-.29l-24-24A1,1,0,0,1,4.71,3.29l24,24a1,1,0,0,1,0,1.42A1,1,0,0,1,28,29Z"/></g><g id="frame"><rect fill="none" height="32" width="32"/></g></svg>
+            </button>
+          </form>
+        </section>
+        <script src="search.js"></script>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>
+
+  <button class="open-button"onclick="openForm()">Chat</button>
+
+  <div class="chat-popup" id="myForm">
+    <form action="" class="form-container">
+      <i class="fa-solid fa-chalkboard-user"></i> <h3>Chat with us</h3>
+
+      <label for="msg">Message</label>
+      <textarea id="msg" placeholder="Type message.." name="msg" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <script src="chat.js"></script>
+
+  <div class="container">
+    <strong><h1 style="text-align: center; font-size: 60px">Десерт Наполеон</h1></strong>
+    <img src="https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/4/220209193937/p_O.jpg.webp" width="800px" style="margin-left: 30px">
+    <p style="margin-left: 30px;line-height: 33px; font-size: 16px; margin-right: 480px">Еще один рецепт из вышеупомянутого ресторана «Барин». Десерт отличный, во многом благодаря тому, что тесто тут можно использовать магазинное. Рецептом с нами поделилась Ника Ганич, автор книги «География на вкус с Никой Ганич. Тула».</p>
+
+    <div class="list-gro">
+      <h4>Энергетическая ценность</h4>
+      <div class="tab">
+        <button class="tablinks" onclick="Energy(event, 'Kal')">Калорийность</button>
+        <button class="tablinks" onclick="Energy(event, 'Belki')">Белки</button>
+        <button class="tablinks" onclick="Energy(event, 'Zhiri')">Жиры</button>
+        <button class="tablinks" onclick="Energy(event, 'Uglevod')">Углеводы</button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="Kal" class="tabcontent">
+        <p>1510 Ккал</p>
+      </div>
+
+      <div id="Belki" class="tabcontent">
+        <p>25 грамм</p>
+      </div>
+
+      <div id="Zhiri" class="tabcontent">
+        <p>97 грамм</p>
+      </div>
+      <div id="Uglevod" class="tabcontent">
+        <p>134 грамм</p>
+      </div>
+      <script src="Tab_content.js"></script>
+      <!-- Tab content -->
+    </div>
+
+    <section class="vh-100">
+      <div class="container py-5 h-10">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-lg-8 col-xl-6">
+            <div class="card rounded-3">
+              <div class="card-body p-4">
+
+                <p class="mb-2"><span class="h2 me-2">Что у меня есть?</span> <span
+                  class="badge bg-danger">Чеклист</span></p>
+                <p class="text-muted pb-2">23/10/2023</p>
+
+                <ul class="list-group rounded-0">
+                  <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                    <input class="form-check-input me-3" type="checkbox"/>
+                    Бездрожжевое слоеное тесто: 500 г
+                  </li>
+                  <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                    <input class="form-check-input me-3" type="checkbox"/>
+                    Куриное яйцо: 2 шт
+                  </li>
+                  <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                    <input class="form-check-input me-3" type="checkbox"/>
+                    Сливки 33%-ные: 150 мл
+                  </li>
+                  <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                    <input class="form-check-input me-3" type="checkbox"/>
+                    Свежие ягоды: по вкусу
+                  </li>
+                  <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                    <input class="form-check-input me-3" type="checkbox"/>
+                    Сахар: 75 г
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-3">
+        <div id="newtask">
+          <input type="text" placeholder="Add Tasks">
+          <button id="push">Add</button>
+        </div>
+        <div id="tasks"></div>
+        <script src="todo.js"></script>
+
+      </div>
+
+      <divm class="timer"></divm>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script src="timer.js"></script>
+    </section>
+
+    <ul class="pagination justify-content-end">
+      <li class="page-item">
+        <a class="page-link" href="maffins.html">Назад</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="zebra.html">1</a>
+      </li>
+      <li class="page-item" aria-current="page">
+        <a class="page-link" href="maffins.html">2</a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Вперед</a>
+      </li>
+    </ul>
+
+  </div>
+
+</main>
+<footer>
+  <div class="footer-content">
+    <h3>Contacts</h3>
+
+    <p>To Contact us write: adilhankenzhaliev@gmail.com</p>
+    <p>Call us to take more information: 87778929020</p>
+
+    <ul class="socials">
+      <li><a href="https://www.instagram.com/vlmvss/"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.youtube.com/@Qarapaiym-adok"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-arrow-up"></i></a></li>
+    </ul>
+
+
+  </div>
+</footer>
+</body>
+</html>

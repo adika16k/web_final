@@ -1,0 +1,541 @@
+form {
+  position: relative;
+}
+
+form input[type=text] {
+  font-size: 18px;
+  width: 0px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  transition: 0.3s all ease-in-out;
+}
+
+form.active input[type=text] {
+  width: 250px;
+  padding: 8px 20px;
+}
+
+form button[type=button] {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  right: 20px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  border: none;
+  border-radius: 100%;
+  background-color: #ff9000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+form button[type=button] svg {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s all ease;
+}
+
+form.active button[type=button] svg.search,
+form button[type=button] svg.close {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+form.active button[type=button] svg.close {
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+}
+
+* {box-sizing: border-box;}
+
+h3{line-height:0rem;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  padding:10px 40px;
+  background-color: #FFA500;
+  color: white;
+  font-size:17px;
+  max-width:300px;
+  border-radius:20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  border-radius:20px;
+  background-color: white;
+  color:#777;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  border-radius:20px;
+  background: #ddd;
+  resize: none;
+  min-height: 200px;
+  color:#777;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  font-size:17px;
+  padding: 10px 20px;
+  border: none;
+  border-radius:20px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #1974D2;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 0.8;
+}
+
+main {
+  background-color: #f5f5f5;
+}
+.btn-goto {
+  width: 45%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100%;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #cacdd2;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  width: 20px;
+  transition: color 0.4s ease;
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+.container {
+  padding-top: 60px;
+  background-color: white;
+  max-width: 1200px;
+}
+
+.container-2 {
+  line-height: 7px;
+  margin-top: 20px;
+
+}
+
+.carousel-item {
+  height: 500px;
+  padding-top: 10px;
+}
+.carousel-item img {
+  height: 500px;
+}
+
+.list-gro{
+  margin-left: 100px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+.ingredient {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.ingredient-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.ingredient-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ingredient-list li {
+  font-size: 16px;
+  margin: 8px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.container-1 {
+  width: 800px;
+  margin-left: 30px;
+}
+
+.timer {
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 240px;
+  border-radius: 30px;
+  background: white;
+}
+
+.timer__part {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.timer__btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #8208e6;
+  cursor: pointer;
+}
+
+.timer__btn--start {
+  background: #00b84c;
+}
+
+.timer__btn--stop {
+  background: #ff0256;
+}
+
+
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#newtask{
+  position: relative;
+  padding: 30px 20px;
+}
+#newtask input{
+  width: 75%;
+  height: 45px;
+  padding: 12px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  font-family: 'Poppins',sans-serif;
+  font-size: 25px;
+  border: 2px solid #d1d3d4;
+}
+
+#newtask input:focus{
+  outline: none;
+  border-color: #0d75ec;
+}
+.form-check-input{
+  font-size: 25px;
+}
+#newtask button{
+  position: relative;
+  float: right;
+  font-weight: 500;
+  font-size: 25px;
+  background-color: #0d75ec;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: 'Poppins',sans-serif;
+}
+#tasks{
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 10px;
+}
+
+.task{
+  border-radius: 5px;
+  justify-content: space-between;
+  border: 1px solid #939697;
+  background-color: #c5e1e6;
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+}
+.task span{
+  font-family: 'Poppins',sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+.task button{
+  background-color: #6583e5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  width: 80px;
+  border-radius: 5px;
+}
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 395px;
+}
+
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 395px;
+  font-size: 20px;
+}
+
+
+.loader1{
+  z-index: 10002;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color :white;
+  opacity: 90%;
+}
+.loader {
+  position: relative;
+  width: 80px;
+  margin: 100px auto;
+}
+
+.duo {
+  height: 20px;
+  width: 50px;
+  background: hsla(0, 0%, 0%, 0.0);
+  position: absolute;
+
+}
+
+.duo, .dot {
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.duo1 {
+  left: 0;
+}
+
+.duo2 {
+  left: 30px
+}
+
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #333;
+  position: absolute;
+}
+
+.dot-a {
+  left: 0px;
+}
+
+.dot-b {
+  right: 0px;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(180deg) }
+  100% { transform: rotate(180deg) }
+}
+
+@keyframes onOff {
+  0% { opacity: 0; }
+  49% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.duo1 {
+  animation-name: spin;
+}
+
+.duo2 {
+  animation-name: spin;
+  animation-direction: reverse;
+}
+
+.duo2 .dot-b {
+  animation-name: onOff;
+}
+
+.duo1 .dot-a {
+  opacity: 0;
+  animation-name: onOff;
+  animation-direction: reverse;
+}
+
+.img-fluid:hover {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-body {
+  opacity: 1;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-title:hover {
+  color: #FFA500;
+}
